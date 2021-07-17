@@ -24,7 +24,7 @@ class App extends Component {
     return (
     <div className="App">
       <Navbar2/>
-      <Inventario/>
+      <Inventario/> 
       <Card>
         <Card.Content>
          <h1>COUNTENT</h1>
