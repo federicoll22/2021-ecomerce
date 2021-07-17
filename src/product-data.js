@@ -6,7 +6,7 @@ const products = [
        producType: "Maceta",
        stock:"En Stock",
        price: 300,
-       imagen:"https://github.com/federicoll22/2021-ecomerce/blob/67033fdac851cb8cb2b1b94e616790d07e8b1c8f/src/imagenes/buho/buho-frente.jpg",
+       imagen:"../imagenes/buho/buho-frente.jpg",
        description:
        "💡 Ideal para Suculentas y/o Cactus  🤑 Precio: $300 o 4 x $1000  🤑 (Precios mayoristas por mail)  💸 Efectivo,Transferencia y Mercadopago 🚲 Envíos a todo el país 🚲 🌈 Hecho con PLA, 100% Ecofriendly ",
     },
