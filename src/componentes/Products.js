@@ -19,6 +19,10 @@ import accounting from "accounting";
 
 
 const useStyles = makeStyles((theme) => ({
+  formatoDescription:{
+    position: "center"
+    
+  },
   root: {
     maxWidth: 345,
   },
@@ -97,7 +101,8 @@ export default function Products({product}){
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph> 
+          <Typography paragraph>
+            <div className={classes.formatoDescription}></div> 
             {product.description}
           </Typography>
         </CardContent>
