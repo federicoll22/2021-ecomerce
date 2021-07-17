@@ -21,7 +21,7 @@ export default function Inventario(){
         {
           products.map(product=>(
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Products key={product.id} product={product}/>
+              <Products product={product} key={product.id}/>
             </Grid>
           ))
         }

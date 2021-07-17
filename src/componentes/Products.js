@@ -17,6 +17,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import accounting from "accounting";
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -43,9 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Products({
-  product:{id, name, producType, imagen, price, description},
-}){ 
+export default function Products({product}){ 
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -62,16 +61,16 @@ export default function Products({
                 variant='h5'
                 color='textSecondary'
             >
-                {accounting.formatMoney(price)}
+                {accounting.formatMoney(product.price)}
             </Typography>
         }
-        title= {name}
-        subheader="maceta"
+        title={product.name}
+        subheader={product.stock}
       />
-      <CardMedia className={classes.media} image= {imagen} title= {name}/>
+      <CardMedia className={classes.media} image={product.imagen}  title= {product.name}/>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-        {producType}                         
+          {product.producType}                        
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -99,10 +98,13 @@ export default function Products({
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph> 
-          {description}
+            {product.description}
           </Typography>
         </CardContent>
       </Collapse>
     </Card>
   );
 }
+
+
+
